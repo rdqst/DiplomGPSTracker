@@ -1,0 +1,197 @@
+{   
+    "active_workers" : 3,
+    "workers" : [
+        {
+            "workerName" : "Федин Сергей Геннадьевич",
+            "workerAge" : 32,
+            "workerPosition" : "Руководитель группы",
+            "workerId" : 1    
+        },
+        {
+            "workerName" : "Рыбаков Дмитрий Алексеевич",
+            "workerAge" : 41,
+            "workerPosition" : "Техник",
+            "workerId" : 2 
+        },
+        {
+            "workerName" : "Мягков Анатолий Викторович",
+            "workerAge" : 27,
+            "workerPosition" : "Техник",
+            "workerId" : 3 
+        }
+    ],
+
+    "id1": [
+        {
+            "timeid": "1",
+            "coordinateX": 55.691862,
+            "coordinateY": 37.356663
+        },
+        {
+            "timeid": "2",
+            "coordinateX": 55.691985,
+            "coordinateY": 37.356862
+        },
+        {
+            "timeid": "3",
+            "coordinateX": 55.691985,
+            "coordinateY": 37.356862
+        },
+        {
+            "timeid": "4",
+            "coordinateX": 55.692368,
+            "coordinateY": 37.357033
+        },
+        {
+            "timeid": "5",
+            "coordinateX": 55.691862,
+            "coordinateY": 37.356663
+        },
+        {
+            "timeid": "6",
+            "coordinateX": 55.691862,
+            "coordinateY": 37.356663
+        },
+        {
+            "timeid": "7",
+            "coordinateX": 55.691862,
+            "coordinateY": 37.356663
+        },
+        {
+            "timeid": "8",
+            "coordinateX": 55.691862,
+            "coordinateY": 37.356663
+        },
+        {
+            "timeid": "9",
+            "coordinateX": 55.691862,
+            "coordinateY": 37.356663
+        },
+        {
+            "timeid": "10",
+            "coordinateX": 55.691862,
+            "coordinateY": 37.356663
+        },
+        {
+            "timeid": "11",
+            "coordinateX": 55.691862,
+            "coordinateY": 37.356663
+        }
+    ],
+
+    "id2": [
+        {
+            "timeid": "1",
+            "coordinateX": 55.691862,
+            "coordinateY": 37.356663
+        },
+        {
+            "timeid": "2",
+            "coordinateX": 55.691862,
+            "coordinateY": 37.356663
+        },
+        {
+            "timeid": "3",
+            "coordinateX": 55.691862,
+            "coordinateY": 37.356663
+        },
+        {
+            "timeid": "4",
+            "coordinateX": 55.691862,
+            "coordinateY": 37.356663
+        },
+        {
+            "timeid": "5",
+            "coordinateX": 55.691862,
+            "coordinateY": 37.356663
+        },
+        {
+            "timeid": "6",
+            "coordinateX": 55.691862,
+            "coordinateY": 37.356663
+        },
+        {
+            "timeid": "7",
+            "coordinateX": 55.691862,
+            "coordinateY": 37.356663
+        },
+        {
+            "timeid": "8",
+            "coordinateX": 55.691862,
+            "coordinateY": 37.356663
+        },
+        {
+            "timeid": "9",
+            "coordinateX": 55.691862,
+            "coordinateY": 37.356663
+        },
+        {
+            "timeid": "10",
+            "coordinateX": 55.691862,
+            "coordinateY": 37.356663
+        },
+        {
+            "timeid": "11",
+            "coordinateX": 55.691862,
+            "coordinateY": 37.356663
+        }
+    ],
+
+    "id3": [
+        {
+            "timeid": "1",
+            "coordinateX": 55.691862,
+            "coordinateY": 37.356663
+        },
+        {
+            "timeid": "2",
+            "coordinateX": 55.691862,
+            "coordinateY": 37.356663
+        },
+        {
+            "timeid": "3",
+            "coordinateX": 55.691862,
+            "coordinateY": 37.356663
+        },
+        {
+            "timeid": "4",
+            "coordinateX": 55.691862,
+            "coordinateY": 37.356663
+        },
+        {
+            "timeid": "5",
+            "coordinateX": 55.691862,
+            "coordinateY": 37.356663
+        },
+        {
+            "timeid": "6",
+            "coordinateX": 55.691862,
+            "coordinateY": 37.356663
+        },
+        {
+            "timeid": "7",
+            "coordinateX": 55.691862,
+            "coordinateY": 37.356663
+        },
+        {
+            "timeid": "8",
+            "coordinateX": 55.691862,
+            "coordinateY": 37.356663
+        },
+        {
+            "timeid": "9",
+            "coordinateX": 55.691862,
+            "coordinateY": 37.356663
+        },
+        {
+            "timeid": "10",
+            "coordinateX": 55.691862,
+            "coordinateY": 37.356663
+        },
+        {
+            "timeid": "11",
+            "coordinateX": 55.691862,
+            "coordinateY": 37.356663
+        }
+    ]
+}
