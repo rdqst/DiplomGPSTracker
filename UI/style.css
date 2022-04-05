@@ -1,5 +1,7 @@
-.map-pos{
-  margin-top: 30px !important; 
-  margin-left: 48px !important;
-  margin-right: 10px !important;  
+body {
+    background-color: #FFF !important;
+}
+
+.card{
+  background-color: #FFF !important;
 }

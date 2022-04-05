@@ -30,6 +30,9 @@ def Lizzard(points):
     print(points)
     #/Временный вывод
 
+    with open("txt.txt", "w") as file:
+        print(points, file=file)
+
     return points
 
 #Функция получения информации о работниках
