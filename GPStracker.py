@@ -12,17 +12,21 @@ def Lizzard(points):
         
         numberOfWorkers = geo['active_workers'] #получаем количество активных работников
 
-        points = []
-
         workersCount = 1
         #Получение массива координат
         while workersCount <= numberOfWorkers: 
-            for txt in geo['id' + str(workersCount)]: #создали цикл, который будет работать построчно
-                points.append(txt['coordinateX'])
-                points.append(txt['coordinateY'])
-            #geo_str.append("-") #Добавление разделителя между координатами
-            workersCount += 1
+            
+            name2 = []
+            for txt in geo['id' + str(workersCount)]: #главный массив
 
+                name = []
+    
+                name.append(txt['coordinateX'])
+                name.append(txt['coordinateY'])
+                name2.append(name)
+                
+            workersCount += 1
+            points.append(name2)
   
     #Временный вывод
 
