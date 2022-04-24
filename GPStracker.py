@@ -1,58 +1,82 @@
 import eel
 import json
+import numpy as np
+from itertools import combinations
 
 eel.init('UI')
 
 points = []
+sick = []
+result = []
 
-#Функция получения координат
-def Lizzard(points):
+
+
+# Функция получения координат
+
+
+def Lizzard(points, result):
     with open("geo.json", "r") as json_file:
         geo = json.load(json_file)
-        
-        numberOfWorkers = geo['active_workers'] #получаем количество активных работников
+
+        # получаем количество активных работников
+        numberOfWorkers = geo['active_workers']
 
         workersCount = 1
-        #Получение массива координат
-        while workersCount <= numberOfWorkers: 
-            
-            name2 = []
-            for txt in geo['id' + str(workersCount)]: #главный массив
+        # Получение массива координат
+        while workersCount <= numberOfWorkers:
 
-                name = []
-    
-                name.append(txt['coordinateX'])
-                name.append(txt['coordinateY'])
-                name2.append(name)
-                
+            workerArray = []
+            for i in geo['id' + str(workersCount)]:
+
+                pointArray = []
+
+                pointArray.append(i['coordinateX'])
+                pointArray.append(i['coordinateY'])
+                workerArray.append(pointArray)
+
+
+                sick.append(pointArray)
+
             workersCount += 1
-            points.append(name2)
-  
-    #Временный вывод
+            points.append(workerArray)
+
+    # Временный вывод
 
     print(type(points))
     print(points)
-    #/Временный вывод
+
+    print(type(sick))
+    print(sick[0])
+    print(sick)
+    # /Временный вывод
+
+    g = 3
+    n = len(sick)//g
+    groups = [sick[i:i + n] for i in range(0, len(sick), n)]
+    for x, y in combinations(groups, 2):
+        numberOfContacts = sum(i==j for i,j in zip(x, y))
+        result.append(int(numberOfContacts))
+    print(result)
+
+        # 1-2, 1-3, 2-3
+
+
+
+
+
+
 
     with open("txt.txt", "w") as file:
         print(points, file=file)
 
-    return points
+    return points, result
 
-#Функция получения информации о работниках
-
-
-   
+ #Функция
 
 
-    
-        
 
 
-       
-        
-
-eel.call(Lizzard(points))
+eel.call(Lizzard(points, result))
 
 
-eel.start("index.html", mode = 'chrome', size = (800, 960))
+eel.start("index.html", mode='chrome', size=(1920, 1080))
