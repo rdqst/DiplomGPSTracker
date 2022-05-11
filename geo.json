@@ -2,22 +2,22 @@
     "active_workers" : 3,
     "workers" : [
         {
+            "workerId" : 1,
             "workerName" : "Федин Сергей Геннадьевич",
             "workerAge" : 32,
-            "workerPosition" : "Организатор",
-            "workerId" : 1    
+            "workerPosition" : "Организатор"
         },
         {
+            "workerId" : 2,
             "workerName" : "Рыбаков Дмитрий Алексеевич",
             "workerAge" : 41,
-            "workerPosition" : "Организатор",
-            "workerId" : 2 
+            "workerPosition" : "Организатор"
         },
         {
+            "workerId" : 3,
             "workerName" : "Мягков Анатолий Викторович",
             "workerAge" : 27,
-            "workerPosition" : "Спикер",
-            "workerId" : 3 
+            "workerPosition" : "Спикер"
         }
     ],
 
