@@ -2,95 +2,152 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GPS-Трекер</title>
-    <link rel="stylesheet" href="style.css">
-    <!--eel-->
-    <script type="text/javascript" src="/eel.js"></script>
-    <!--Bootstrap CSS-->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-        crossorigin="anonymous"></script>
-    <!--Yandex maps API-->
-    <script src="https://api-maps.yandex.ru/2.1/?apikey=4ce223fe-fe7c-4837-80fb-1f017bf82ade&lang=ru_RU"
-        type="text/javascript"></script>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GPS-Трекер</title>
+  <link rel="stylesheet" href="style.css">
+  <!--eel-->
+  <script type="text/javascript" src="/eel.js"></script>
+  <!--Bootstrap CSS-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+  <!--Yandex maps API-->
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=4ce223fe-fe7c-4837-80fb-1f017bf82ade&lang=ru_RU"
+    type="text/javascript"></script>
 </head>
 
 <body>
 
 
 
+  <div class="container">
 
-
-    <div class="container d-flex mt-5 mr-2">
-        <div class="col-8 card container">
-
-            <div class="container p-2">
-                <div class="map-pos" id="map" style="width: 100%; height: 600px"></div>
-            </div>
-        </div>
-
-
-
-
-
-
-
-        <div class="col-4 card container p-2" style="margin-left: 10px;">
-            <table class="table">
-                <thead>
-                  <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">First</th>
-                    <th scope="col">Last</th>
-                    <th scope="col">Handle</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <th scope="row">1</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">1</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">1</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                  </tr>
-                </tbody>
-              </table>
-
-             <!-- <script>
-                const dbParam = JSON.stringify({table:"customers",limit:20});
-                const xmlhttp = new XMLHttpRequest();
-                xmlhttp.onload = function() {
-                  const myObj = JSON.parse(this.responseText);
-                  let text = "<table border='1'>"
-                  for (let x in myObj) {
-                    text += "<tr><td>" + myObj[x].name + "</td></tr>";
-                  }
-                  text += "</table>"    
-                  document.getElementById("demo").innerHTML = text;
-                }
-                xmlhttp.open("POST", "json_demo_html_table.php");
-                xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-                xmlhttp.send("x=" + dbParam);
-                </script>-->
-
-        </div>
+    <div class=" d-flex">
+      <div class="col-12 card container mt-1">
+        <h1 class="text-center">Система перемещения сотрудников</h1>
+      </div>
     </div>
+
+    <div class=" d-flex mt-4">
+      <div class="col-8 card container">
+
+        <div class="container p-2">
+          <div class="map-pos" id="map" style="width: 100%; height: 600px"></div>
+        </div>
+      </div>
+
+
+
+      <div class="col-1"></div>
+
+
+
+      <div class="col-3">
+        
+        <div class="card container pt-3 pb-3 mb-4">
+          
+          <button type="button" class="btn btn-success mb-2 p-3" onclick="location.reload()">Обновить информацию</button>
+          <button type="button" class="btn btn-danger mt-2 p-3" onclick="window.close()">Выход из приложения</button>
+     
+        </div>
+
+
+
+
+        <div class="card container">
+        <h2 class="text-center mt-2">Пересечения</h2>
+        <table class="table mt-2">
+          <thead>
+            <tr>
+              <th scope="col">№ сотрудника</th>
+              <th scope="col">Контакт</th>
+
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+
+              <td>Mark</td>
+              <td>Otto</td>
+ 
+            </tr>
+            <tr>
+
+              <td>Mark</td>
+              <td>Otto</td>
+     
+            </tr>
+            <tr>
+
+              <td>Mark</td>
+              <td>Otto</td>
+    
+            </tr>
+            <tr>
+
+              <td>Mark</td>
+              <td>Otto</td>
+    
+            </tr>
+            <tr>
+
+              <td>Mark</td>
+              <td>Otto</td>
+    
+            </tr>
+            <tr>
+
+              <td>Mark</td>
+              <td>Otto</td>
+    
+            </tr>
+          </tbody>
+        </table>
+
+
+      </div>
+      </div>
+    </div>
+    <div class=" d-flex mt-4">
+      <div class="col-12 card container">
+        <h2 class="text-center mt-2">Информация о сотрудниках</h2>
+        <table class="table mt-2">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">ФИО</th>
+              <th scope="col">Возраст</th>
+              <th scope="col">Должность</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">1</th>
+              <td>Mark</td>
+              <td>Otto</td>
+              <td>@mdo</td>
+            </tr>
+            <tr>
+              <th scope="row">1</th>
+              <td>Mark</td>
+              <td>Otto</td>
+              <td>@mdo</td>
+            </tr>
+            <tr>
+              <th scope="row">1</th>
+              <td>Mark</td>
+              <td>Otto</td>
+              <td>@mdo</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
 </body>
 
 
@@ -126,50 +183,53 @@
 
 <script type="text/javascript">
 
-    var pointsPy = {};
+  var obj;
+  var chel1;
 
-    eel.expose(call);
-    function call(points, result, table) {
+  //Получаем массивы данных
+  eel.expose(call);
+  function call(points, result, table) {
 
-        
-        pointsPy = points;
-
-        console.log(points);
-    }
-    
+    console.log(points);
+    obj = points[0];
 
 
+    var chel1 = obj[0];
 
-    let points2 = {chel:[[55.688216, 37.351543], [55.68822, 37.351781], [55.68824, 37.351523], [55.688238, 37.351430], [55.688234, 37.351293], [55.688175, 37.351256], [55.688242, 37.351113], [55.68831, 37.350992], [55.688391, 37.350849], [55.688491, 37.350671], [55.688491, 37.350671], [55.688491, 37.350671], [55.688491, 37.350671], [55.688491, 37.350671], [55.688491, 37.350671], [55.688582, 37.350512], [55.688648, 37.350462], [55.688657, 37.350768], [55.688656, 37.351027], [55.688688, 37.351424], [55.688779, 37.351688], [55.688779, 37.351688], [55.688825, 37.351797], [55.688936, 37.351687], [55.689041, 37.351609], [55.689047, 37.351384], [55.689047, 37.351384], [55.689047, 37.351384], [55.689047, 37.351384], [55.689047, 37.351384], [55.689047, 37.351384], [55.689047, 37.351384], [55.689047, 37.351384], [55.689047, 37.351384], [55.689047, 37.351384], [55.689047, 37.351384], [55.689047, 37.351384], [55.689047, 37.351384], [55.689047, 37.351384], [55.689047, 37.351384], [55.68904, 37.35161], [55.689214, 37.351669], [55.689395, 37.351761], [55.689524, 37.351827], [55.689539, 37.352157], [55.689554, 37.352523], [55.689575, 37.352819], [55.689606, 37.353169], [55.689646, 37.353533], [55.689727, 37.353955], [55.689796, 37.354218], [55.68992, 37.354553], [55.690025, 37.354791], [55.690208, 37.355097], [55.690383, 37.355295], [55.690481, 37.3554], [55.690808, 37.355601], [55.691027, 37.355672], [55.69125, 37.355688], [55.691496, 37.355636], [55.691755, 37.35552], [55.691885, 37.355443], [55.69201, 37.355353], [55.69213, 37.355229], [55.692197, 37.355146], [55.692287, 37.355011], [55.692382, 37.354856], [55.692454, 37.35472], [55.692509, 37.354607], [55.692575, 37.354445], [55.692628, 37.354312], [55.692789, 37.353766], [55.692874, 37.353211], [55.692911, 37.352665], [55.692936, 37.35231], [55.69306, 37.351881], [55.69325, 37.351561], [55.693495, 37.35119], [55.693747, 37.350781], [55.69393, 37.350387], [55.694021, 37.349908], [55.694015, 37.349194], [55.693958, 37.348323], [55.693924, 37.347609], [55.693872, 37.346633], [55.69416, 37.346614], [55.694164, 37.346792], [55.694186, 37.347149], [55.694278, 37.347441], [55.694584, 37.347232], [55.694913, 37.347168], [55.695302, 37.34712], [55.695552, 37.347108], [55.695754, 37.347077], [55.695769, 37.347296], [55.695914, 37.347275], [55.696052, 37.347253], [55.696046, 37.347363], [55.696046, 37.347363], [55.696046, 37.347363], [55.696046, 37.347363], [55.696046, 37.347363], [55.696046, 37.347363], [55.696046, 37.347363], [55.696046, 37.347363], [55.696046, 37.347363], [55.696046, 37.347363], [55.696046, 37.347363], [55.696046, 37.347363], [55.696046, 37.347363], [55.696054, 37.34708], [55.695949, 37.347086], [55.695826, 37.347078], [55.695791, 37.34655], [55.695784, 37.346121], [55.695791, 37.345839], [55.695593, 37.34583], [55.695402, 37.345853], [55.695213, 37.345872], [55.695183, 37.345253]]}
-      
+    sessionStorage.setItem('chel1', JSON.stringify(chel1));
+
+  }
+
+  chel1 = JSON.parse(sessionStorage.getItem('chel1'));
+
+  console.log(chel1);
+
+  //Карта
+  ymaps.ready(init);
+  function init() {
+    var myMap = new ymaps.Map("map", {
+      center: [55.691044, 37.352471],
+      zoom: 15
+    });
+
+    var myPolyline = new ymaps.Polyline(chel1,
+      {
+        balloonContent: "Polyline"
+      },
+      {
+        balloonCloseButton: false,
+        strokeColor: "#FF0000",
+        strokeWidth: 4,
+        strokeOpacity: 0.5
+      });
+
+    myMap.geoObjects
+
+      .add(myPolyline);
 
 
 
-    ymaps.ready(init);
-    function init() {
-        var myMap = new ymaps.Map("map", {
-            center: [55.691044, 37.352471],
-            zoom: 16
-        });
-
-        var myPolyline = new ymaps.Polyline(points2.chel,
-            {
-                balloonContent: "Polyline"
-            },
-            {
-                balloonCloseButton: false,
-                strokeColor: "#FF0000",
-                strokeWidth: 4,
-                strokeOpacity: 0.5
-            });
-
-        myMap.geoObjects
-
-            .add(myPolyline);
-
-
-
-    }
+  }
 </script>
 
 
