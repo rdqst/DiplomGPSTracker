@@ -18,6 +18,7 @@
   <!--Yandex maps API-->
   <script src="https://api-maps.yandex.ru/2.1/?apikey=4ce223fe-fe7c-4837-80fb-1f017bf82ade&lang=ru_RU"
     type="text/javascript"></script>
+
 </head>
 
 <body>
@@ -47,69 +48,70 @@
 
 
       <div class="col-3">
-        
+
         <div class="card container pt-3 pb-3 mb-4">
-          
-          <button type="button" class="btn btn-success mb-2 p-3" onclick="location.reload()">Обновить информацию</button>
+
+          <button type="button" class="btn btn-success mb-2 p-3" onclick="location.reload()">Обновить
+            информацию</button>
           <button type="button" class="btn btn-danger mt-2 p-3" onclick="window.close()">Выход из приложения</button>
-     
+
         </div>
 
 
 
 
         <div class="card container">
-        <h2 class="text-center mt-2">Пересечения</h2>
-        <table class="table mt-2">
-          <thead>
-            <tr>
-              <th scope="col">№ сотрудника</th>
-              <th scope="col">Контакт</th>
+          <h2 class="text-center mt-2">Пересечения</h2>
+          <table class="table mt-2">
+            <thead>
+              <tr>
+                <th scope="col">№ сотрудника</th>
+                <th scope="col">Контакт</th>
 
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
 
-              <td>Mark</td>
-              <td>Otto</td>
- 
-            </tr>
-            <tr>
+                <td>Mark</td>
+                <td>Otto</td>
 
-              <td>Mark</td>
-              <td>Otto</td>
-     
-            </tr>
-            <tr>
+              </tr>
+              <tr>
 
-              <td>Mark</td>
-              <td>Otto</td>
-    
-            </tr>
-            <tr>
+                <td>Mark</td>
+                <td>Otto</td>
 
-              <td>Mark</td>
-              <td>Otto</td>
-    
-            </tr>
-            <tr>
+              </tr>
+              <tr>
 
-              <td>Mark</td>
-              <td>Otto</td>
-    
-            </tr>
-            <tr>
+                <td>Mark</td>
+                <td>Otto</td>
 
-              <td>Mark</td>
-              <td>Otto</td>
-    
-            </tr>
-          </tbody>
-        </table>
+              </tr>
+              <tr>
+
+                <td>Mark</td>
+                <td>Otto</td>
+
+              </tr>
+              <tr>
+
+                <td>Mark</td>
+                <td>Otto</td>
+
+              </tr>
+              <tr>
+
+                <td>Mark</td>
+                <td>Otto</td>
+
+              </tr>
+            </tbody>
+          </table>
 
 
-      </div>
+        </div>
       </div>
     </div>
     <div class=" d-flex mt-4">
@@ -183,26 +185,23 @@
 
 <script type="text/javascript">
 
-  var obj;
-  var chel1;
+  
+  var colors = ['#FF0000', '#042ab5', '#04b556'];
 
   //Получаем массивы данных
   eel.expose(call);
   function call(points, result, table) {
 
-    console.log(points);
-    obj = points[0];
 
 
-    var chel1 = obj[0];
 
-    sessionStorage.setItem('chel1', JSON.stringify(chel1));
+    sessionStorage.setItem('data', JSON.stringify(points));
 
   }
 
-  chel1 = JSON.parse(sessionStorage.getItem('chel1'));
+  data = JSON.parse(sessionStorage.getItem('data'));
 
-  console.log(chel1);
+  console.log(data);
 
   //Карта
   ymaps.ready(init);
@@ -212,20 +211,27 @@
       zoom: 15
     });
 
-    var myPolyline = new ymaps.Polyline(chel1,
-      {
-        balloonContent: "Polyline"
-      },
-      {
-        balloonCloseButton: false,
-        strokeColor: "#FF0000",
-        strokeWidth: 4,
-        strokeOpacity: 0.5
+
+      data[0].forEach((element, index) => {
+        var myPolyline = new ymaps.Polyline(element,
+        {
+          balloonContent: "Работник № " + (index + 1)
+        },
+        {
+          balloonCloseButton: false,
+          strokeColor: colors[index],
+          strokeWidth: 4,
+          strokeOpacity: 0.9
+        });
+
+      myMap.geoObjects
+
+        .add(myPolyline);
       });
+    
+      
 
-    myMap.geoObjects
-
-      .add(myPolyline);
+  
 
 
 
