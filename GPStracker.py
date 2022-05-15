@@ -16,7 +16,7 @@ table = []
 
 
 def Lizzard(points, result, table):
-    with open("geo.json", "r") as json_file:
+    with open("geo.json", "r", encoding='utf-8') as json_file:
         geo = json.load(json_file)
 
         # получаем количество активных работников
@@ -43,12 +43,7 @@ def Lizzard(points, result, table):
 
     # Временный вывод
 
-    print(type(points))
-    print(points)
-
-    print(type(sick))
-    print(sick[0])
-    print(sick)
+   
     # /Временный вывод
 
     g = 3
@@ -64,6 +59,7 @@ def Lizzard(points, result, table):
 
     table = geo['workers']
     print(table)
+    
 
 
 

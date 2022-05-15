@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
+  <meta Content-type="application/json" charset=utf-8>
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>GPS-Трекер</title>
@@ -65,48 +65,31 @@
           <table class="table mt-2">
             <thead>
               <tr>
-                <th scope="col">№ сотрудника</th>
-                <th scope="col">Контакт</th>
+                <th scope="col">ID сотрудника</th>
+                <th scope="col"  class="text-center">Контакт (Кол-во)</th>
 
               </tr>
             </thead>
             <tbody>
               <tr>
 
-                <td>Mark</td>
-                <td>Otto</td>
+                <td>1</td>
+                <td class="text-center">2(23), 3(0)</td>
 
               </tr>
               <tr>
 
-                <td>Mark</td>
-                <td>Otto</td>
+                <td>2</td>
+                <td class="text-center">1(23), 3(0)</td>
 
               </tr>
               <tr>
 
-                <td>Mark</td>
-                <td>Otto</td>
+                <td>3</td>
+                <td class="text-center">1(0), 2(0)</td>
 
               </tr>
-              <tr>
-
-                <td>Mark</td>
-                <td>Otto</td>
-
-              </tr>
-              <tr>
-
-                <td>Mark</td>
-                <td>Otto</td>
-
-              </tr>
-              <tr>
-
-                <td>Mark</td>
-                <td>Otto</td>
-
-              </tr>
+              
             </tbody>
           </table>
 
@@ -117,34 +100,33 @@
     <div class=" d-flex mt-4">
       <div class="col-12 card container">
         <h2 class="text-center mt-2">Информация о сотрудниках</h2>
-        <table class="table mt-2">
+        <table class="table mt-2 text-center" id="users">
           <thead>
             <tr>
-              <th scope="col">#</th>
+              <th scope="col">Цвет</th>
+              <th scope="col">ID сотрудника</th>
               <th scope="col">ФИО</th>
               <th scope="col">Возраст</th>
               <th scope="col">Должность</th>
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <th scope="row">1</th>
-              <td>Mark</td>
-              <td>Otto</td>
-              <td>@mdo</td>
-            </tr>
-            <tr>
-              <th scope="row">1</th>
-              <td>Mark</td>
-              <td>Otto</td>
-              <td>@mdo</td>
-            </tr>
-            <tr>
-              <th scope="row">1</th>
-              <td>Mark</td>
-              <td>Otto</td>
-              <td>@mdo</td>
-            </tr>
+
+            <script>
+              data = JSON.parse(sessionStorage.getItem('data'));
+              var colors = ['#FF0000', '#042ab5', '#04b556'];
+
+              document.querySelector('#users tbody').innerHTML = data[2].map((element, index) => `
+                <tr>
+                  <td style = "background-color: ${colors[index]} !important;"></td>
+                  <td>${element.workerId}</td>
+                  <td>${element.workerName}</td>
+                  <td>${element.workerAge}</td>
+                  <td>${element.workerPosition}</td>
+                </tr>
+                `).join('');
+            </script>
+
           </tbody>
         </table>
       </div>
@@ -185,7 +167,7 @@
 
 <script type="text/javascript">
 
-  
+
   var colors = ['#FF0000', '#042ab5', '#04b556'];
 
   //Получаем массивы данных
@@ -212,8 +194,8 @@
     });
 
 
-      data[0].forEach((element, index) => {
-        var myPolyline = new ymaps.Polyline(element,
+    data[0].forEach((element, index) => {
+      var myPolyline = new ymaps.Polyline(element,
         {
           balloonContent: "Работник № " + (index + 1)
         },
@@ -227,15 +209,18 @@
       myMap.geoObjects
 
         .add(myPolyline);
-      });
-    
-      
-
-  
+    });
 
 
 
   }
+
+
+
+
+
+
+
 </script>
 
 

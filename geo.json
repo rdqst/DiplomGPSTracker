@@ -662,9 +662,9 @@
             "coordinateY": 37.351466
         },
         {
-            "timeid": "8",
-            "coordinateX": 55.691862,
-            "coordinateY": 37.356663
+            "timeid": "8", 
+            "coordinateX": 55.688495, 
+            "coordinateY": 37.351355
         },
         {
             "timeid": "9",
@@ -697,7 +697,7 @@
             "coordinateY": 37.350860
         },
         {
-            "timeid": "5",
+            "timeid": "15",
             "coordinateX": 55.688391, 
             "coordinateY": 37.350860
         },
@@ -728,18 +728,18 @@
         },
         {
             "timeid": "21",
-            "coordinateX": 55.691862,
-            "coordinateY": 37.356663
+            "coordinateX": 55.688514, 
+            "coordinateY": 37.350631
         },
         {
             "timeid": "22",
-            "coordinateX": 55.688612, 
-            "coordinateY": 37.350459
+            "coordinateX": 55.688616, 
+            "coordinateY": 37.350464 
         },
         {
             "timeid": "23",
-            "coordinateX": 55.691862,
-            "coordinateY": 37.356663
+            "coordinateX": 55.688638, 
+            "coordinateY": 37.350458
         },
         {
             "timeid": "24",
@@ -748,8 +748,8 @@
         },
         {
             "timeid": "25",
-            "coordinateX": 55.691862,
-            "coordinateY": 37.356663
+            "coordinateX": 55.688666, 
+            "coordinateY": 37.350487
         },
         {
             "timeid": "26",
@@ -928,8 +928,8 @@
         },
         {
             "timeid": "61",
-            "coordinateX": 55.691862,
-            "coordinateY": 37.356663
+            "coordinateX": 55.694413, 
+            "coordinateY": 37.346953
         },
         {
             "timeid": "62",
@@ -1546,8 +1546,8 @@
         },
         {
             "timeid": "64",
-            "coordinateX": 55.691783, 
-            "coordinateY": 37.347019
+            "coordinateX": 55.691777,  
+            "coordinateY": 37.350478
         },
         {
             "timeid": "65",
@@ -1561,8 +1561,8 @@
         },
         {
             "timeid": "67",
-            "coordinateX": 55.694752, 
-            "coordinateY": 37.347019
+            "coordinateX": 55.692137, 
+            "coordinateY": 37.350411
         },
         {
             "timeid": "68",
@@ -1606,8 +1606,8 @@
         },
         {
             "timeid": "76",
-            "coordinateX": 55.696073, 
-            "coordinateY": 37.346801
+            "coordinateX": 55.693889, 
+            "coordinateY": 37.348545 
         },
         {
             "timeid": "77",
