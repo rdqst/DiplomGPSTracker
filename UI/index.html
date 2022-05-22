@@ -18,6 +18,7 @@
   <!--Yandex maps API-->
   <script src="https://api-maps.yandex.ru/2.1/?apikey=4ce223fe-fe7c-4837-80fb-1f017bf82ade&lang=ru_RU"
     type="text/javascript"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
 
 </head>
 
@@ -56,10 +57,6 @@
           <button type="button" class="btn btn-danger mt-2 p-3" onclick="window.close()">Выход из приложения</button>
 
         </div>
-
-
-
-
         <div class="card container">
           <h2 class="text-center mt-2">Пересечения</h2>
           <table class="table mt-2">
@@ -92,8 +89,6 @@
               
             </tbody>
           </table>
-
-
         </div>
       </div>
     </div>
@@ -111,7 +106,6 @@
             </tr>
           </thead>
           <tbody>
-
             <script>
               data = JSON.parse(sessionStorage.getItem('data'));
               var colors = ['#FF0000', '#042ab5', '#04b556'];
@@ -126,63 +120,53 @@
                 </tr>
                 `).join('');
             </script>
-
           </tbody>
         </table>
       </div>
     </div>
   </div>
+  <div class="modal fade in" tabindex="-1" role="dialog" id="myModal">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Авторизация</h5>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Логин</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">Пароль</label>
+              <input type="password" class="form-control" id="exampleInputPassword1">
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary">Войти</button>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Отмена</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript">
+    $(window).on('load',function(){
+        $('#myModal').modal('show');
+    });
+</script>
 </body>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <script type="text/javascript">
-
 
   var colors = ['#FF0000', '#042ab5', '#04b556'];
 
   //Получаем массивы данных
   eel.expose(call);
   function call(points, result, table) {
-
-
-
-
     sessionStorage.setItem('data', JSON.stringify(points));
-
   }
 
   data = JSON.parse(sessionStorage.getItem('data'));
-
   console.log(data);
 
   //Карта
@@ -192,7 +176,6 @@
       center: [55.691044, 37.352471],
       zoom: 15
     });
-
 
     data[0].forEach((element, index) => {
       var myPolyline = new ymaps.Polyline(element,
@@ -207,21 +190,9 @@
         });
 
       myMap.geoObjects
-
         .add(myPolyline);
     });
 
-
-
   }
-
-
-
-
-
-
-
 </script>
-
-
 </html>

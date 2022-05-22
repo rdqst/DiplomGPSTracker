@@ -2,7 +2,6 @@ import eel
 import json
 from itertools import combinations
 
-
 eel.init('UI')
 
 points = []
@@ -10,16 +9,12 @@ sick = []
 result = []
 table = []
 
-
-
 # Функция получения координат
-
-
 def Lizzard(points, result, table):
     with open("geo.json", "r", encoding='utf-8') as json_file:
         geo = json.load(json_file)
 
-        # получаем количество активных работников
+        # Получаем количество активных работников
         numberOfWorkers = geo['active_workers']
 
         workersCount = 1
@@ -40,9 +35,6 @@ def Lizzard(points, result, table):
 
             workersCount += 1
             points.append(workerArray)
-
-    # Временный вывод
-
    
     # /Временный вывод
 
@@ -56,24 +48,16 @@ def Lizzard(points, result, table):
 
         # 1-2, 1-3, 2-3
 
-
     table = geo['workers']
     print(table)
     
-
-
 
     with open("txt.txt", "w") as file:
         print(points, file=file)
 
     return points, result, table
 
- #Функция
-
-
-
 
 eel.call(Lizzard(points, result, table))
-
 
 eel.start("index.html", mode='chrome', size=(1920, 1080))
