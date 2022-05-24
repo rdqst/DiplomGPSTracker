@@ -5,7 +5,7 @@
   <meta Content-type="application/json" charset=utf-8>
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>GPS-Трекер</title>
+  <title>Система учета перемещения людей</title>
   <link rel="stylesheet" href="style.css">
   <!--eel-->
   <script type="text/javascript" src="/eel.js"></script>
@@ -18,22 +18,17 @@
   <!--Yandex maps API-->
   <script src="https://api-maps.yandex.ru/2.1/?apikey=4ce223fe-fe7c-4837-80fb-1f017bf82ade&lang=ru_RU"
     type="text/javascript"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
-
+  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+    crossorigin="anonymous"></script>
 </head>
 
 <body>
-
-
-
   <div class="container">
-
     <div class=" d-flex">
       <div class="col-12 card container mt-1">
         <h1 class="text-center">Система перемещения сотрудников</h1>
       </div>
     </div>
-
     <div class=" d-flex mt-4">
       <div class="col-8 card container">
 
@@ -41,21 +36,12 @@
           <div class="map-pos" id="map" style="width: 100%; height: 600px"></div>
         </div>
       </div>
-
-
-
       <div class="col-1"></div>
-
-
-
       <div class="col-3">
-
         <div class="card container pt-3 pb-3 mb-4">
-
           <button type="button" class="btn btn-success mb-2 p-3" onclick="location.reload()">Обновить
             информацию</button>
           <button type="button" class="btn btn-danger mt-2 p-3" onclick="window.close()">Выход из приложения</button>
-
         </div>
         <div class="card container">
           <h2 class="text-center mt-2">Пересечения</h2>
@@ -63,30 +49,22 @@
             <thead>
               <tr>
                 <th scope="col">ID сотрудника</th>
-                <th scope="col"  class="text-center">Контакт (Кол-во)</th>
-
+                <th scope="col" class="text-center">Контакт (Кол-во)</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-
                 <td>1</td>
                 <td class="text-center">2(23), 3(0)</td>
-
               </tr>
               <tr>
-
                 <td>2</td>
                 <td class="text-center">1(23), 3(0)</td>
-
               </tr>
               <tr>
-
                 <td>3</td>
                 <td class="text-center">1(0), 2(0)</td>
-
               </tr>
-              
             </tbody>
           </table>
         </div>
@@ -134,7 +112,7 @@
         <div class="modal-body">
           <form>
             <div class="mb-3">
-              <label for="exampleInputEmail1" class="form-label">Логин</label>
+              <label for="exampleInputLogin1" class="form-label">Логин</label>
               <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
             </div>
             <div class="mb-3">
@@ -142,6 +120,8 @@
               <input type="password" class="form-control" id="exampleInputPassword1">
             </div>
           </form>
+          <hr>
+          <p style="color: red">Пользователь не найден в базе данных.<br>Проверьте правильность введенных данных</p>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-primary">Войти</button>
@@ -151,10 +131,10 @@
     </div>
   </div>
   <script type="text/javascript">
-    $(window).on('load',function(){
-        $('#myModal').modal('show');
+    $(window).on('load', function () {
+      $('#myModal').modal('show');
     });
-</script>
+  </script>
 </body>
 <script type="text/javascript">
 
@@ -195,4 +175,5 @@
 
   }
 </script>
+
 </html>
